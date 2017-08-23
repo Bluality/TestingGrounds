@@ -56,6 +56,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint32 bUsingMotionControllers : 1;
 
+	UPROPERTY(EditAnywhere, Category = "Setup")
+	TSubclassOf<class AGun> GunBlueprint;
+
 protected:
 
 	/** Resets HMD orientation and position in VR. */
@@ -104,6 +107,10 @@ protected:
 	 * @returns true if touch controls were enabled.
 	 */
 	bool EnableTouchscreenMovement(UInputComponent* InputComponent);
+
+private:
+
+	AGun* Gun;
 
 public:
 	/** Returns Mesh1P subobject **/
