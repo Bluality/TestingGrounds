@@ -55,6 +55,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	/** Fires a projectile. */
+	UFUNCTION(BlueprintCallable, Category = "Input")
 	void OnFire();
 	
 };
